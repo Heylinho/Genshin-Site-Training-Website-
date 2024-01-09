@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    background-image: linear-gradient(to right, #0A1C33, #294366);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.377);
+}
+
+#logo{
+    cursor: pointer;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6.0rem;
+}
+
+.logo-header{
+    display: flex;
+    align-items: center;
+}
+
+.lista-header{
+    display: flex;
+    align-items: center;
+}
+
+.lista-header ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.itens-header{
+    margin: 0 15px;
+}
+
+.link-header{
+    box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.274);
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #142031;
+    border-radius: 10px;
+    padding: 1.0rem 1.7rem;
+    transition: background-color  0.5s ease;
+}
+
+.link-header:hover{
+    background-color: #707b8a;
+}
+
+main{
+    background-image: url("../img/wallpaper.jpg");
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    flex: 1;
+}
+
+#home{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home > div{
+    margin: 2.1px;
+}
+
+#imgraiden, #imgzhongli, #imgnahida, #imgfurina{
+    border: 3px solid black;
+    height: 300px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#imgraiden:hover, #imgzhongli:hover, #imgnahida:hover, #imgfurina:hover{
+    transform: scale(1.5);
+}
+
+#god{
+    display: none;
+    height: 100%;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    position: relative;
+    background-image: linear-gradient(to right, #0A1C33, #294366);
+    color: #fff;
+    height: 10%;
+}
+
+footer div{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem;
+}
+
+#creator{
+    display: block;
+    text-align: center;
+}
+
+#aviso{
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+}
+#div-stickers{
+    display: none;
+}
+
+@media (max-width:1050px){
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista-header {
+        margin-top: 1.5rem;
+    }
+
+    #imgraiden, #imgzhongli, #imgnahida, #imgfurina{
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .lista-header ul {
+        align-items: center; 
+    }
+
+    .itens-header {
+        margin-top: 0.5rem;
+    }
+    .lista-header li {
+        margin-bottom: 0.7rem;
+    }
+
+    .link-header{
+        padding: 0.7rem 1.3rem;
+        font-size: 10px;
+    }
+
+    #imgraiden, #imgzhongli, #imgnahida, #imgfurina{
+        height: 200px;
+    }
+
+    footer{
+        height: 15%;
+    }
+}
+
+@media (max-width: 450px) {
+    .lista-header ul {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    #home{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #home > div{
+        margin: 0;
+    }
+}
